@@ -1,0 +1,250 @@
+.form {
+  // border: 1px solid white;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 375px;
+  height: auto;
+  padding: 1rem;
+
+  @media screen and (min-width: 50rem) {
+    width: 600px;
+  }
+}
+
+.title-wrapper {
+  // border: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.75rem;
+
+  h1 {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.75rem;
+  }
+
+  .theme-changer {
+    width: 30px;
+    height: 30px;
+    background-image: var(--tgl-btn);
+    background-size: cover;
+    cursor: pointer;
+  }
+}
+
+.input-wrapper {
+  // border: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+  background: var(--form-bg);
+}
+
+.input-btn {
+  width: 24px;
+  height: 24px;
+  background: var(--form-bg);
+  border-radius: 50%;
+  border: 1px solid $dark-grayish-blue;
+}
+
+.todo-input {
+  // border: 1px solid white;
+  background: var(--form-bg);
+  width: 90%;
+  padding: 1rem 0;
+  outline: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--font-color);
+  caret-color: $bright-blue;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.list-container {
+  // border: 1px solid white;
+  width: 100%;
+  min-height: 300px;
+  max-height: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: var(--form-bg);
+}
+
+.list-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $dark-grayish-blue;
+
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  p {
+    // border: 1px solid white;
+    color: var(--font-color);
+    width: 80%;
+  }
+}
+
+.circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid $dark-grayish-blue;
+  cursor: pointer;
+
+  &:hover {
+    border-color: hsl(280, 87%, 65%);
+  }
+}
+
+.close-btn {
+  cursor: pointer;
+}
+
+.active {
+  position: relative;
+  background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+  &::before {
+    content: '✔';
+    color: white;
+    position: absolute;
+    top: 0px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+// .draggable {
+//   cursor: move;
+// }
+
+.dragging {
+  opacity: 0.5;
+}
+
+.todo-info {
+  // border: 1px solid white;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: var(--form-bg);
+
+  @media screen and (min-width: 50rem) {
+    display: grid;
+    grid-template-columns: 30% auto 30%;
+  }
+
+  span {
+    color: $dark-grayish-blue;
+
+    text-align: center;
+  }
+}
+
+.clear-btn {
+  // border: 1px solid white;
+  color: $dark-grayish-blue;
+  background: none;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: all 300ms ease;
+
+  &:hover {
+    color: var(--hover-color);
+  }
+}
+
+.todo-filter {
+  // border: 1px solid white;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  background: var(--form-bg);
+
+  @media screen and (min-width: 50rem) {
+    position: static;
+    width: auto;
+    padding: 0.5rem;
+    margin-top: 0;
+  }
+}
+
+.filter-btn {
+  color: $dark-grayish-blue;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 300ms ease;
+
+  &:hover {
+    color: var(--hover-color);
+  }
+}
+
+.filter-active {
+  color: $bright-blue;
+}
+
+.todo-footer {
+  // border: 1px solid white;
+  position: absolute;
+  top: 125px;
+  left: 0px;
+  width: 100%;
+  color: $dark-grayish-blue;
+  margin-top: 2rem;
+  text-align: center;
+
+  @media screen and (min-width: 50rem) {
+    margin-top: 0;
+  }
+}
+
+.attribution {
+  // border: 1px solid white;
+  position: absolute;
+  top: 250px;
+  left: 0;
+  width: 100%;
+  color: $dark-grayish-blue;
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}

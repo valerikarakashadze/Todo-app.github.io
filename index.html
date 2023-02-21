@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+    <!-- header image -->
+    <div class="header-bg"></div>
+
+    <div class="form">
+      <div class="title-wrapper">
+        <h1>Todo</h1>
+        <div class="theme-changer"></div>
+      </div>
+
+      <div class="input-wrapper">
+        <button class="input-btn"></button>
+        <input
+          class="todo-input"
+          type="text"
+          placeholder="Create a new todo.."
+        />
+      </div>
+
+      <div class="list-container"></div>
+
+      <div class="todo-info">
+        <span class="count"></span>
+        <div class="todo-filter">
+          <button class="filter-btn all-btn filter-active">All</button>
+          <button class="filter-btn active-btn">Active</button>
+          <button class="filter-btn completed-btn">Completed</button>
+        </div>
+        <div class="clear-btn">Clear Completed</div>
+        <div class="todo-footer">Drag and drop to reorder list</div>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a
+            href="https://valerikarkashadze.com/"
+            target="_blank"
+            >Valeri Karkashadze</a
+          >.
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
